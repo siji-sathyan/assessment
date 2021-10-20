@@ -25,6 +25,16 @@ pipeline {
               sh 'npm run build'
             }
          }
+      stage('package') {
+            steps {  
+              sh 'zip assessment.zip dist/assessment'       
+            }
+         }
+      stage('Generate Artifacts') {
+            steps {              
+               archiveArtifacts 'angproject1.zip'
+            }
+         }
       stage('docker-build') {
             steps {
               script{
