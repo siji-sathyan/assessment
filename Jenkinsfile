@@ -32,7 +32,7 @@ pipeline {
          }
       stage('Generate Artifacts') {
             steps {              
-               archiveArtifacts 'angproject1.zip'
+               archiveArtifacts 'assessment.zip'
             }
          }
       stage('docker-build') {
