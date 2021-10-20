@@ -1,4 +1,4 @@
-def dockerRun='docker run -p 80:80 -d --name assessment sijisdocker/angular:v1'
+def dockerRun='docker run -p 80:80 -d --name assessment1 sijisdocker/angular:v1'
 pipeline {
     agent {label 'agent' }
    tools {
