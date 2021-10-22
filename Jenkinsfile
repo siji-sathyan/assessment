@@ -1,4 +1,4 @@
-def dockerRun='docker run -p 80:80 -d --name assessment2 sijisdocker/angular:v1'
+def dockerRun='docker run -p 80:80 -d --name assessment sijisdocker/angular:v1'
 pipeline {
     agent {label 'agent' }
    tools {
@@ -62,7 +62,7 @@ pipeline {
        stage('Run on server'){
         steps{          
           sshagent(['SSH-ID']) {
-            sh "ssh -o StrictHostKeyChecking=no ec2-user@44.199.200.178 ${dockerRun}"
+            sh "ssh -o StrictHostKeyChecking=no ec2-user@34.205.43.214 ${dockerRun}"
       }
       }
       }    
